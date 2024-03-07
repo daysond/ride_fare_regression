@@ -305,6 +305,8 @@ The majority of the effort was spent on feature engineering as we were trying to
 
 We also spent some time exploring different models such as LinearSVR, Stacking Regressor, ElasticNet, Lasso etc. These models came up with similar results and some of them took additional resources. Thus, they were not used in the final code and report.
 
+**Conclusion**: based on the experiments, using feature engineering and differnt models result in similar error: around 4.5. We consider the model acceptable given the data itself is sparse, i.e. the prices of the same trip can vary. To make this model more accurate, we could consider other factors such as weather, and include more data samples and data from other month and year. Other model such as neural network might be used instead to improve the accuracy.
+
 
 
 
