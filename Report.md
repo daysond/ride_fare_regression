@@ -1,3 +1,17 @@
+---
+title: "Doc-Title"
+lang: "en"
+colorlinks: true
+header-includes:
+- |
+  ```{=latex}
+  \usepackage{pdflscape}
+  \newcommand{\blandscape}{\begin{landscape}}
+  \newcommand{\elandscape}{\end{landscape}}
+    ```
+...
+
+
 # SEA600 Machine Learning Assignment 1
 
 ## Problem & Data Description
@@ -26,6 +40,7 @@ In addition, features such as *driver_pay, tips, tolls, bcf, sales_tax, request_
 
 After cleaning up the columns, the new dataset will look like this:
 
+
 | index     | pickup_datetime       | dropoff_datetime      | PULocationID | DOLocationID | trip_miles | trip_time | base_passenger_fare | congestion_surcharge | airport_fee |
 |-----------|-----------------------|-----------------------|--------------|--------------|------------|-----------|---------------------|----------------------|-------------|
 | 12201792  | 2022-11-20 11:02:45   | 2022-11-20 11:19:49   | 41           | 48           | 5.28       | 1024      | 25.21               | 2.75                 | 0.0         |
@@ -33,6 +48,8 @@ After cleaning up the columns, the new dataset will look like this:
 | 13040156  | 2022-11-21 19:13:41   | 2022-11-21 19:33:56   | 163          | 125          | 4.79       | 1215      | 42.57               | 2.75                 | 0.0         |
 | 2107754   | 2022-11-04 17:47:21   | 2022-11-04 18:03:00   | 10           | 130          | 2.21       | 939       | 14.28               | 0.00                 | 0.0         |
 | 17227919  | 2022-11-29 15:29:02   | 2022-11-29 15:33:30   | 210          | 210          | 0.63       | 268       | 7.51                | 0.00                 | 0.0         |
+
+=
 
 #### Data Visualization
 
@@ -147,11 +164,11 @@ After cleaning up the dataset and feature crossing and encoding, this is how the
 
 | trip_miles | is_airport_trip | congestion_lvl | trip_time_real | hourly_segments_H1 | ... | hourly_segments_H6 | day_segments_WD | day_segments_WK | total_fare | enc_day_x_time | enc_PUxDOL |
 |------------|-----------------|----------------|----------------|--------------------|-----|--------------------|-----------------|-----------------|------------|----------------|-------------|
-| 1.660      | 0               | 2              | 12.667         | 0                  | ... | 0                  | 1               | 0               | 17.91       | 5.371463       | 22.811771   |
-| 4.240      | 0               | 0              | 15.583         | 1                  | ... | 0                  | 0               | 1               | 16.91       | 5.977721       | 25.739411   |
-| 2.690      | 0               | 0              | 11.050         | 0                  | ... | 0                  | 0               | 1               | 12.50       | 4.534792       | 24.736056   |
-| 1.867      | 0               | 0              | 8.033          | 0                  | ... | 0                  | 1               | 0               | 11.53       | 5.753829       | 23.149589   |
-| 4.380      | 0               | 0              | 15.067         | 0                  | ... | 0                  | 1               | 0               | 15.10       | 6.306063       | 24.531976   |
+| 1.660      | 0  | 2  | 12.667  | 0  | ... | 0    | 1   | 0    | 17.91       | 5.371463       | 22.811771   |
+| 4.240      | 0  | 0  | 15.583  | 1  | ... | 0    | 0   | 1    | 16.91       | 5.977721       | 25.739411   |
+| 2.690      | 0  | 0  | 11.050  | 0  | ... | 0    | 0   | 1    | 12.50       | 4.534792       | 24.736056   |
+| 1.867      | 0  | 0  | 8.033   | 0  | ... | 0    | 1   | 0    | 11.53       | 5.753829       | 23.149589   |
+| 4.380      | 0  | 0  | 15.067  | 0  | ... | 0    | 1   | 0    | 15.10       | 6.306063       | 24.531976   |
 
 
 
